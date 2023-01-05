@@ -7,7 +7,7 @@
         <!-- Lista dentro do sideBar -->
         <mat-nav-list class="nav-list">
              <!-- Item dentro do sideBar -->
-             <a mat-list-item routerLink="/">
+             <a mat-list-item routerLink="home">
                 <i class="material-icons">home</i>
                 Home
              </a>
@@ -34,6 +34,7 @@
       <button class="menu mat-elevation-z8" mat-icon-button (click)="drawer.toggle()">
         <mat-icon>menu</mat-icon>
       </button>
+      <router-outlet></router-outlet>
     </div>
   
 </mat-drawer-container>
