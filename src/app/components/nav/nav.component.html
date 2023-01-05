@@ -1,1 +1,39 @@
-<h1>Nav</h1>
+<!-- Container principal -->
+<mat-drawer-container class="container" autosize>
+    <!-- SideBar -->
+    <mat-drawer #drawer class="sidenav" mode="side">
+        <!-- Icone de cima -->
+        <img src="assets/img/side-image.svg" alt="Imagem de navegação">
+        <!-- Lista dentro do sideBar -->
+        <mat-nav-list class="nav-list">
+             <!-- Item dentro do sideBar -->
+             <a mat-list-item routerLink="/">
+                <i class="material-icons">home</i>
+                Home
+             </a>
+             <a mat-list-item routerLink="/">
+                <i class="material-icons">account_circle</i>
+                Técnicos
+             </a>
+             <a mat-list-item routerLink="/">
+                <i class="material-icons">person</i>
+                Clientes
+             </a>
+             <a mat-list-item routerLink="/">
+                <i class="material-icons">code</i>
+                GitHub
+             </a>
+             <a mat-list-item routerLink="/">
+                <i class="material-icons">logout</i>
+                Logout
+             </a>
+        </mat-nav-list>
+    </mat-drawer>
+  
+    <div class="sidenav-content">
+      <button class="menu mat-elevation-z8" mat-icon-button (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+  
+</mat-drawer-container>
