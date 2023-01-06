@@ -4,19 +4,31 @@
         <img src="assets/img/login-image.svg" alt="Help Desk Login">
         <mat-form-field class="full-width" appearance="fill">
             <mat-label>E-mail</mat-label>
-            <input matInput placeholder="Email@example.com" [formControl]="email" required>
+            <input 
+            matInput 
+            name = "email"
+            placeholder="Email@example.com" 
+            [(ngModel)]="creds.email"
+            [formControl]="email" 
+            required>
             <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
        </mat-form-field>
 
         <mat-form-field class="full-width" appearance="fill">
             <mat-label>Senha</mat-label>
-            <input matInput [type]="hidePass ? 'password' : 'text'">
+            <input 
+            matInput 
+            name="senha" 
+            [(ngModel)]="creds.senha" 
+            [formControl]="senha" 
+            [type]="hidePass ? 'password' : 'text'" 
+            required>
             <button mat-icon-button matSuffix (click)="hidePass = !hidePass" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hidePass">
                 <mat-icon>{{hidePass ? 'visibility_off' : 'visibility'}}</mat-icon>
             </button>
         </mat-form-field>
 
-        <button class="full-width mat-elevation-z2" mat-stroked-button color="primary">Primary</button>
+        <button [disabled]="!validaCampos()" class="full-width mat-elevation-z2" mat-stroked-button color="primary">Login</button>
     </form>  
 
 </div>
