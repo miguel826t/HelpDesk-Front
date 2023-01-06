@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 import { Credenciais } from 'src/app/models/credenciais';
 
 @Component({
@@ -17,7 +18,9 @@ export class LoginComponent implements OnInit {
   senha = new FormControl(this.creds.senha, [Validators.required, Validators.minLength(8)]);
   hidePass : boolean;
 
-  constructor() { }
+  constructor(
+    private toast: ToastrService
+  ) { }
 
   ngOnInit(): void {
     this.hidePass = true;
@@ -29,6 +32,11 @@ export class LoginComponent implements OnInit {
     }else{
       return false;
     }
+  }
+
+  logar(){
+    this.toast.success('Bem vindo!','Login')
+    this.creds.senha = '';
   }
 
   getErrorMessage() {
