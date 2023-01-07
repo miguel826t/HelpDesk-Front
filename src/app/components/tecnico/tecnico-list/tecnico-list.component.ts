@@ -13,7 +13,7 @@ export class TecnicoListComponent implements OnInit {
   ELEMENT_DATA : Tecnico[] = [
     {
       id : 1,
-      nome : "Mrc",
+      nome : "Mrc 1234",
       email : "mrc@gmail.com",
       cpf : "132.432.543-43",
       perfils : ['0'],
