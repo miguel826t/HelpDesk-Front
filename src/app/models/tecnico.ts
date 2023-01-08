@@ -3,6 +3,7 @@ export interface Tecnico {
     nome :       string;
     cpf:         string;
     email :      string;
+    senha :      string;
     perfils:     string[];
     dataCriacao: any;
 }
