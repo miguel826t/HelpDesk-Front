@@ -21,3 +21,11 @@ table {
     justify-content: space-between;
     flex-wrap: wrap;
   }
+
+ .edit{
+   color: rgb(224, 160, 22);
+   margin-right: .5rem;
+ }
+ .delete {
+   color: rgb(216, 15, 15);
+ }
