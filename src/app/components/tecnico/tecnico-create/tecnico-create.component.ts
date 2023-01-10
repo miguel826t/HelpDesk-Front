@@ -45,8 +45,8 @@ tecnico : Tecnico = {
 
   create(): void {
     this.service.create(this.tecnico).subscribe(resposta => {
-      this.toast.success('Técnico criado com sucesso.')
-      this.router.navigate(['tenicos'])
+      this.toast.success('Técnico criado com sucesso.');
+      this.router.navigate(['tecnicos']);
     }, ex => {
       console.log(ex);
       if(ex.error.errors){
