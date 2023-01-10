@@ -36,7 +36,6 @@ export class TecnicoUpdateComponent implements OnInit {
 
   ngOnInit(): void {
     this.tecnico.id = this.route.snapshot.paramMap.get('id');
-    console.log(this.tecnico.id)
     this.findById();
   }
   validaCampos(): boolean {
